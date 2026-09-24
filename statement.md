@@ -1,217 +1,169 @@
-Health Analyser and Tracker
+# Health Analyser & Tracker
 
-1. Problem Statement
+## 1. Problem Statement
 
-Keeping track of young your daily habits can help you maintain a healthy lifestyle by doing the following:
+It is helpful for users to keep record of their daily habits such as their water intake, sleep, exercise and the number of steps they take since this enables them to become aware of their lifestyle patterns. However, when the information is recorded by hand it becomes difficult to organise the data and to identify simple trends.
 
-water consumption, sleep, workout, and daily steps. These entries are...
+The Health Analyser & Tracker is a console application written in Python which enables users to input their personal details and to keep a record of their daily health activities; it computes the BMI, stores the daily health records, calculates the average values, determines both the highest and lowest number of steps, carries out a basic health analysis and gives a health score.
 
-Kept manually, it can hard to arrange the data and How can you test managed to content earlier?
+It is being developed for educational use and is not to be used for medical diagnosis or treatment.
 
-Figure out basic trends.
+---
 
-The Python console application that enables the use of the Health Analyser &amp; Tracker and all the tools and features within it.
+## 2. Objectives
 
-Users to fill out a simple profile and tracker health data.
+1. To obtain basic information about the user.
+2. To work out and show BMI.
+3. Keep a record of the amount of water you take in each day, the number of steps you walk and the exercises you do.
+4. So that you can store your daily health records multiple times.
+5. To work out the average values for health-related activity.
+To find the maximum and minimum number of steps.
+7. To analyse the daily health records.
+8. To work out a basic health score.
+To produce a final health report.
 
-Monitoring activities. The application calculates BMI, stores daily logs, calculates.
+---
 
-Averages, shows you the most and least number of steps, and gives a basic
-
-health score (above the ideal program limits).
-
-This project is meant to be an educational tracking application and is not
-
-For the purpose of diagnostic or therapeutic.
-
-2. Objectives
-
-1. To collect basic data on users.
-
-2. To calculate and present BMI.
-
-3. To Log In My Daily Water, Sleep, Steps and Exercise.
-
-4. To back up numerous daily health logs.
-
-5. To compute the mean of health-related activity variables.
-
-6. To locate the largest and smallest number of steps.
-
-7. Just to give us a plain health calculator.
-
-8. To generate a straight-up health score.
-
-9. To issue the final health report.
-
-3. Main Features
+## 3. Main Features
 
 - User Profile
-
 - BMI Calculation
-
+- BMI Category
 - Daily Health Tracking
-
 - Multiple Record Storage
-
-- Health Analysis
-
 - Average Calculation
-
 - Highest and Lowest Step Analysis
-
+- Health Analysis
 - Health Score
-
 - Final Health Report
-
 - Input Validation
 
-4. Functional Requirements
+---
 
-Profile Management
+## 4. Functional Requirements
+
+### Profile Management
 
 The system should collect:
 
 - Name
-
 - Age
-
 - Height
-
 - Weight
 
-BMI Calculation
+### BMI Calculation
 
-The system would need to then be able to calculate BMI based on the height and weight entered and
+The system must compute the BMI using the height and weight entered by the user and then show the appropriate BMI category.
 
-display a BMI classification.
-
-Daily Tracking
+### Daily Health Tracking
 
 The system should allow the user to enter:
 
 - Date
-
-- How much water you're drinking
-
-- Sleep time 2.10* Patient Sleep 24:0:0* Patient Activity 73550. A patient is in the hospital from 11:52 on 8/10/2023 until 16:53 on 8/20/2023. (Adjusted for time zone). You want to know how much he/she sleeps while hospitalized.
-
+- Water intake in litres
+- Sleep duration in hours
 - Total number of steps
+- Exercise duration in minutes
 
-- Duration of exercise
-
-Health Analysis
+### Health Analysis
 
 The system should:
 
-- Find averages
+- Work out the average amount of water taken in.
+- Figure out the average amount of sleep.
+- Calculate average steps.
+- Find the average length of exercise.
+- Find the greatest number of steps.
+- Find the smallest number of steps.
+- Look at the most recent health record.
+- Work out a basic health score.
 
-- Largest number of steps in the list
+### Report Generation
 
-- Discover smallest steps
+The system must show the health records that have been stored and produce a final health report which includes the user's profile, their BMI information and the health data that has been recorded.
 
-- Analyse recent study
+---
 
-- 1 health score2
-
-Report Generation
-
-And, the system has to show the stored record and produce the conclusive health.
-
-9CXD-YK39-9X7X2 4 4 6 8 0 3 4 0 0 8 Specific key for here specific but not clear handwritten "draw it here" Red marks on the top section - may be doodling on or time line of story? May be a drawing "Finally another day for drawing the house"; Pink pencil lines Red scrawled writing on second page "There is a person here. The people do certain things" 10th last 2 lines "is partly in the show" Seeing or mouse drawing in a box Last block of 4 11th last 2 lines " is away bar some stars" "Tea bar some stars" "One with a white face wants to help another white face" "The face of the horse wants to leave the lake""The boy wants the horse and the horse wants to go back to the horse." 3rd last to last "He is Petilover "One of the black dots drawing again. Last "time about playing the horse" Seeing horse on back; writing at top of lines and drawing, - horse's eyes are close with ear on them.
-
-5. Input Validation
+## 5. Input Validation
 
 The program checks that:
 
-- AGE more than 0.
+- The age is more than zero.
+- The height is more than zero.
+- The weight is more than zero.
+- Water intake is not negative.
+- Sleep duration is not negative.
+The number of steps is not negative.
+Exercise duration is not less than zero.
+- The program deals with invalid numerical input correctly.
 
-- Height is more than 0.
+---
 
-- heavier than 0.
+## 6. Technologies Used
 
-- Drinking water is not a bad thing.
+The project is developed in Python.
 
-- Time in bed does not have negative effects.
-
-- Steps aren't bad.
-
-- Duration of exercise is not negative.
-
-Invalid numerical input Error handling is used.
-
-6. Technologies Used
-
-- Python
+Python concepts used include:
 
 - Functions
-
 - Modules
-
 - Lists
-
 - Dictionaries
-
 - Conditional Statements
-
 - Loops
-
 - Input Validation
 
-7. Testing, Testing
+---
 
-Test the program with both valid and invalid inputs.
+## 7. Testing
+
+The program must be tested with both valid and invalid inputs.
 
 | Test Case | Input / Action | Expected Result |
+|---|---|---|
+| TC01 | Enter valid profile details | Profile is accepted and BMI is calculated |
+| TC02 | Enter text instead of age | Invalid input message is displayed |
+| TC03 | Enter zero or negative age | Invalid age is rejected |
+| TC04 | Enter zero or negative height | Invalid height is rejected |
+| TC05 | Enter zero or negative weight | Invalid weight is rejected |
+| TC06 | Enter negative water intake | Value is rejected |
+| TC07 | Enter negative sleep duration | Value is rejected |
+| TC08 | Enter negative steps | Value is rejected |
+| TC09 | Enter negative exercise duration | Value is rejected |
+| TC10 | Choose option 1 and add a valid record | Daily record is stored |
+| TC11 | Choose option 2 | Stored records are displayed |
+| TC12 | Choose option 3 | Health analysis is displayed |
+| TC13 | Select an invalid menu option | Invalid option message is displayed |
+| TC14 | Choose option 4 | Final health report is displayed |
 
-From my training data: |---|---|---|
+---
 
-Case number Expected result Actual output Status TC01 Valid profile accepted and BMI calculated Profile is accepted and BMI is calculated P As a user you are able to go on and input valid profile details to get your BMI calculated.
-
-Invalid message is not displayed for Field TC02 | TC03 | Enter text instead of age | Invalid message is displayed for the incorrect input |
-
-| TC03 | Enter zero/negative age | User prompted to give valid age |
-
-| TC04 | Invalid height | User requested to provide a height and use the entered value |
-
-| TC05 | Enter invalid weight | User inputs weight that is not valid |
-
-| TC06 | Ingesta de agua negativa | El valor es rechazado |
-
-| TC07 | Negative sleep hours entered | Value rejected |
-
-| TC08 | Identify steps carried out in search for step information | Enter negative steps | Received rejection |
-
-| TC09 | Enter the exercise duration negative | Value is refused |
-
-| TC10 | Choose option 1 | Daily record is transmitted |
-
-| TC11 | Choose 2 | Display stored records |
-
-| TC12 | Choose choice 3 | Is health analysis available |
-
-| TC13 | Select invalid menu option | Display message that choice is invalid |
-
-| TC14 | Choose option 4 | The final report will be showing |
-
-8. Future Scope
+## 8. Future Scope
 
 Possible future improvements include:
 
-- Save records to file at any time, permanently.
+- Save the health records permanently to a file.
+- Include graphs and charts to illustrate health trends.
+- Including additional health analysis functions.
+- Include a graphical user interface.
+- Let users make edits to records.
+Letting users remove individual records.
+- Adding database storage.
 
-1. Create a graph of disease.
+---
 
-- More analysis functions.
+## 9. Project Limitations
 
-- Incorporating an interface that is Graphical.
+The project is an educational health-tracking application.
 
-- Edit and delete records.
+The health score is determined by a set of fixed thresholds which are defined in the program and must not be regarded as medical advice, a diagnosis or treatment.
 
-9. Project Limitation
+The records are stored by the current version only while the program is running and it fails to offer permanent database storage.
 
-PROJECT HEALTH-TRACKING APP This is an app that tracks the health of the users. The value and the is the following: .
+---
 
-'these thresholds are fixed for the project at the start of the program and should not
+## 10. Conclusion
 
-not construed as medical advice or diagnosis.
+The Health Analyser & Tracker shows how Python programming concepts can be put into practice when developing a simple health-tracking application.
+
+Users are able to keep daily records of their health, work out their BMI, analyse their basic health information and produce a final health report. The project also shows how functions, modules, lists, dictionaries, loops, and input validation can be used.
